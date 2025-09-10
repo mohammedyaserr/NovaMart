@@ -1,0 +1,95 @@
+
+.signup-card-Right {
+    width: 60%;
+    height: 100%;
+    padding: 3%;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: #ffffff;
+}
+
+
+.signup-card-right-branding {
+    /* background: #000; */
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.mart-color {
+    color: #000;
+}
+
+
+.heading-signup {
+    font-size: 45px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color:#19bc7d;
+}
+
+.vara1 {
+    margin-top: 2%;
+    width: 15%;
+    height: 2px;
+    border: none;
+    background: #19bc7d;
+}
+
+
+/* Left sec  */
+
+.signup-card-left {
+    width: 40%;
+    height: 100%;
+    background: #19bc7d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+
+
+
+.crtaccbtn {
+    width: 30%;
+    height: 10%;
+    border-radius: 25px;
+    margin-top: 5%;
+    border: solid 2px #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #ffff;
+    background: #19bc7d;
+    cursor: pointer;
+}
+
+.crtaccbtn:focus {
+    border: solid 2px #ffff;
+}
+
+.crtaccbtn:active {
+  border: 2px solid #19bc7d;
+  color: #19bc7d;
+  background: #ffffff;
+  border: solid 2px #ffff;
+}
+
+.crtaccbtn:active {
+  border: 2px solid #19bc7d;
+  background: #ffffff;
+  color: #19bc7d;
+  border: solid 2px #19bc7d;
+}

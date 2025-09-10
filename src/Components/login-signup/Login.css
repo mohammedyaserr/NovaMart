@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Darker+Grotesque:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@200;300;400;600;700&family=Rowdies:wght@300;400;700&family=TASA+Orbiter:wght@400..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    width: 80%;
+    height: 90%;
+    border-radius: 25px;
+    display: flex;
+    background: #000;
+    box-shadow: 0px 0px 20px #000;
+}
+
+.login-card-left {
+    width: 60%;
+    height: 100%;
+    padding: 3%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.login-card-left-contents {
+    /* background: #000; */
+    width: 85%;
+    height: 85%;
+    margin-top: 5%;
+    margin-left: 7.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-card-left-branding {
+    /* background: #000; */
+    display: flex;
+    gap: 5px;
+}
+
+.mart-color {
+    color: #000;
+}
+
+h1 {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color:#19bc7d;
+}
+
+.heading {
+    font-size: 45px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color:#19bc7d;
+}
+
+.vara1 {
+    margin-top: 2%;
+    width: 15%;
+    height: 2px;
+    border: none;
+    background: #19bc7d;
+}
+
+.login-card-left-logo-container {
+    width: 28%;
+    height: 8%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    /* background: rebeccapurple; */
+}
+
+.logo-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 1px #dbdbdb;
+    /* background: #e5e2e2; */
+
+}
+
+.logo-container:hover {
+    border-color: #19bc7d;
+}
+
+.signinoptionslogos {
+    height: 70%;
+}
+
+.afterlogotxt {
+    font-size: 20px;
+    color: #bababa;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    word-spacing: 5px;
+}
+
+.login-inputbox {
+    width: 65%;
+    height: 10%;
+    border-radius: 8px;
+    margin-top: 3%;
+    padding-left: 5px;
+    border: solid 2px #bababa;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #19bc7d;
+}
+
+
+.login-card-left-rememberme {
+    width: 65%;
+    height: 5%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #bababa;
+    word-spacing: 2px;
+}
+
+.remembermewrap {
+    display: flex;
+}
+
+.rememberme {
+    margin-right: 5px;
+}
+
+.singinbtn {
+    width: 22%;
+    height: 10%;
+    border-radius: 25px;
+    margin-top: 5%;
+
+    font-size: 20px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #ffff;
+    background: #19bc7d;
+    border-style: none;
+}
+
+
+/* right sec  */
+
+.login-card-right {
+    width: 40%;
+    height: 100%;
+    background: #19bc7d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.login-right-heading {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.vara2 {
+    margin-top: 5%;
+    width: 15%;
+    height: 3px;
+    border: none;
+    background: #ffff;
+    margin-bottom: 5%;
+}
+
+.login-right-para {
+    width: 60%;
+    text-align: center;
+    color: #ffff;
+    margin-bottom: 3%;
+
+    font-size: 20px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.signupbtn {
+    width: 25%;
+    height: 7%;
+    border-radius: 25px;
+    margin-top: 5%;
+    border: solid 2px #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    font-size: 20px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    color: #ffff;
+    background: #19bc7d;
+}
+
+.signupbtn:focus {
+    border: solid 2px #ffff;
+}
+
+.signupbtn:active {
+  border: 2px solid #19bc7d;
+  color: #19bc7d;
+  background: #ffffff;
+  border: solid 2px #ffff;           /* optional */
+}
+
+.singinbtn:active {
+  border: 2px solid #19bc7d;  /* changes border color when clicked */
+  background: #ffffff;
+  color: #19bc7d;
+  border: solid 2px #19bc7d;
+}
