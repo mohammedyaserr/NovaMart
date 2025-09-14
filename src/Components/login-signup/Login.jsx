@@ -7,13 +7,33 @@ import "./Login.css"
 import fb from "../../assets/facebook (1).png";
 import ld from "../../assets/linkedin (1).png";
 import google from "../../assets/social.png";
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
-  function login() {
-    const [email,setEmail] = useState ('')
+  
+    const [email,setEmail] = useState ("");
+    const [password, setPassword] = useState ("");
+    const navigate = useNavigate();
+
+    const handlelogin = () => {
+      let Userlist = JSON.parse(localStorage.getItem("Userslist")) || [];
+      const Usermatch = Userlist.find (
+        (user) => user.email === email && user.password === password
+      );
+
+      if (Usermatch) {
+      // alert(`Welcome back, ${Usermatch.name}!`);
+      localStorage.setItem("currentUser", JSON.stringify(Usermatch));
+
+      
+      navigate("/home");  
+    } else {
+      toast.error("Invalid email or password!");
+    }
   }
+
   return (
     <div>
       <div className="login-container">
@@ -37,8 +57,8 @@ const Login = () => {
                 </div>
               </div>
               <p className='afterlogotxt'>or use your email account</p>
-              <input type="text" placeholder='Username or email' className="login-inputbox" />
-              <input type="password" placeholder="Password" className='login-inputbox' />
+              <input type="text" onChange={(e) =>setEmail(e.target.value)} placeholder='Username or email' className="login-inputbox" />
+              <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" className='login-inputbox' />
               <div className="login-card-left-rememberme">
                 <div className="remembermewrap">
                 <input type="checkbox" id="remember" name="remember" className='rememberme'/>
@@ -46,7 +66,7 @@ const Login = () => {
                 </div>
                 <p>Forgotten Password?</p>
               </div>
-              <input type="button" value="Sign in" className='singinbtn'/>
+              <input type="button" onClick={handlelogin} value="Sign in" className='singinbtn'/>
             </div>
           </div>
           <div className="login-card-right">
