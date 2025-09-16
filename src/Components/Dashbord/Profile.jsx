@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Dashbord from './Dashbord';
+import Dashbord from './Navbar';
 import "./profile.css";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import logoutimg from "../../assets/logout.png";
 import edit from "../../assets/editing.png";
 import dlt from "../../assets/delete.png";
+import Navbar from './Navbar';
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -57,7 +58,7 @@ const Profile = () => {
 
     return (
         <>
-            <Dashbord />
+            <Navbar />
             <div className="main-container">
                 <div className="side-tab">
                     <div className="side-tab-headins">
