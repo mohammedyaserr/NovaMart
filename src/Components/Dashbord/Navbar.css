@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Darker+Grotesque:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:wght@200;300;400;600;700&family=Rowdies:wght@300;400;700&family=TASA+Orbiter:wght@400..800&display=swap');
 * {
     margin: 0;
     padding: 0;
+
+    font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100; */
+  font-style: normal;
 }
 
 .navbar-container {
@@ -9,13 +15,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: #000000;
+    background: #202A38;
 
 }
 
 .nav-bar-search-box {
-    width: 33%;
-    height: 45px;
+    width: 30%;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -23,7 +29,7 @@
     /* background: #ffffff; */
     /* border: solid 2px #19bc7d; */
     /* border: solid 2px #191970; */
-    border: solid 1px #e7e7e7;
+    border: solid 1px #F8F6F0;
 
 }
 .search-box{
@@ -35,7 +41,7 @@
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
     background: #00000000;
-    color: #b8b8b8d7;
+    color: #F8F6F0;
     font-size: 15px;
 }
 .search-box:focus{
@@ -48,7 +54,7 @@
 
 .nav-branding {
     width: 33%;
-    height: 90%;
+    height: 100%;
     font-size: 18px;
     display: flex;
     justify-content: center;
@@ -56,13 +62,8 @@
     /* background: gray; */
     gap: 5px;
 }
-
-.nav-branding1 {
-    color: #19bc7d;
-}
-
-.nav-branding2 {
-    color: #ffffff;
+.nav-branding img {
+    height: 130%;
 }
 
 .navbar-items {
@@ -82,7 +83,7 @@
 }
 
 .inner-itesm {
-    width: 50%;
+    width: 40%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -91,8 +92,7 @@
 }
 
 .img-div {
-    width: 40px;
-    height: 40px;
+    height: 25px;
     object-fit: contain;
     /* background: #880a0a; */
 }
@@ -101,18 +101,22 @@
     width: 100%;
     height: 100%;
 }
+.userprofileicon:hover {
+    filter: brightness(0) invert(1);
+}
 
 .homebtn {
     text-decoration: none;
+    color: #F8F6F0;
 }
 
 
 .under-nav-optins {
     width: 100%;
     height: 55px;
-    gap: 20%;
+    /* gap: 20%; */
     font-size: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     /* margin-top: 1px; */
     display: flex;
     align-items: center;
@@ -121,15 +125,20 @@
     border-top: solid 1px #ffffff;
 }
 
+
+
 ul {
+    width: 80%;
     list-style: none;
     display: flex;
-    gap: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 90px; */
     font-size: 20px;
     color: #ffffff;
     /* background: #000; */
 }
 
 li:hover {
-    color: #1ee196;
+    color: #D4AF37;
 }

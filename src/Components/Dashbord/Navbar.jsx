@@ -3,20 +3,22 @@ import "./Navbar.css"
 
 // images 
 
+import mainlogotans from "../../assets/M&co-logo-transparent.png"
+
 import user from "../../assets/user (1).png"
 import cart from "../../assets/shopping-cart (1).png"
 import wishlist from "../../assets/e-commerce.png"
 import searchicon from "../../assets/search-icon.png"
 
 import { Link } from 'react-router-dom'
-import Productslist from './Products-list'
+// import Productslist from './Products-list'
 
 const Navbar = () => {
     return (
         <>
             <div className="navbar-container">
                 <div className="nav-branding">
-                    <h1 className='nav-branding1'>Nova</h1> <h1 className='nav-branding2'>Mart</h1>
+                    <img src={mainlogotans} alt="" />
                 </div>
                 <div className="nav-bar-search-box">
 
@@ -31,7 +33,7 @@ const Navbar = () => {
                 <div className="profile">
                     <div className="inner-itesm">
 
-                        <Link to="/profile">
+                        <Link to="/profile" >
                             <div className="img-div">
                                 <img src={wishlist} alt="" className='userprofileicon' />
                             </div>
@@ -63,17 +65,6 @@ const Navbar = () => {
                     <Link to="/home" className='homebtn'> <li>Home</li> </Link>
                     <li>About</li>
                     <li>Contact us</li>
-                </ul>
-
-                <ul>
-                    <Link to="/home" className='homebtn'> <li>Shoes</li> </Link>
-                    <li>Electronics</li>
-                    <li>Watches</li>
-                    <li>Televisions</li>
-                    <li>Smartphones</li>
-                    <li>home appliances</li>
-                    {/* <li>Bags</li> */}
-                    {/* <li>Accessories</li> */}
                 </ul>
             </div>
 
