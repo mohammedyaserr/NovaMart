@@ -7,6 +7,7 @@ import { ToastContainer } from 'react-toastify'
 import Profile from './Components/Dashbord/Profile'
 import Cart from './Components/Dashbord/Cart'
 import Home from './Components/Dashbord/Home'
+import { StoreProvider } from './Components/Context'
 
 const App = () => {
   return (
@@ -18,16 +19,19 @@ const App = () => {
         hideProgressBar={true}
         pauseOnHover={false}
         draggable={true}
-        />
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/profile' element={<Profile/>} />
-          <Route path='/cart' element={<Cart/>}/>
-        </Routes>
-      </BrowserRouter>
+      />
+
+      <StoreProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </StoreProvider>
     </>
   )
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import "./Premium-sec.css"
 import { topselling } from './Product-list'
 
-// import test from "../../assets/e6e6c262de67d0745efff1c75ac27808.png"
 
 const Premiumsec = () => {
     return (
@@ -17,7 +16,7 @@ const Premiumsec = () => {
                 <div className="products">
 
                     {topselling.map((item) => (
-                            <div className="products-item">
+                            <div className="products-item" key={item.id}>
                                 <div className="product-img-sec">
                                     <img src={item.img} alt="" />
                                 </div>

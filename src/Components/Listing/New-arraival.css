@@ -6,7 +6,7 @@
 
 .new-main-container {
     width: 100%;
-    height: 2500px;
+    height: min-content;
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -31,8 +31,8 @@
 }
 
 .items-container {
-    width: 95%;
-    height: 100%;
+    width: 90%;
+    height: min-content;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     /* background: #000; */
@@ -42,13 +42,20 @@
     width: 85%;
     height: 550px;
     margin-top: 50px;
-    /* background: #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: #ac3d3d; */
 }
 
 .na-img-sec {
     /* background: red; */
-    height: 80%;
-    width: 100%;
+    height: 60%;
+    width: 75%;
+}
+.na-img-sec:hover {
+    border: solid 1px #000000;
 }
 
 .na-img-sec img {
@@ -59,6 +66,7 @@
 .naprdtdetails {
     width: 100%;
     height: 20%;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;

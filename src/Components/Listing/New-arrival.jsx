@@ -24,7 +24,7 @@ const Newarrival = () => {
                             <div className="naprdtdetails">
                                 <h4>{item.name}</h4>
                                 <p>Mrp</p>
-                                <h4>₹ 12,000 </h4>
+                                <h4>₹ {item.price} </h4>
                                 <input type="button" value="Add to cart" className='addtobtn' />
                             </div>
                         </div>

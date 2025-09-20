@@ -22,7 +22,7 @@ const Navbar = () => {
                 </div>
                 <div className="nav-bar-search-box">
 
-                    <input type="text" placeholder='Search items' className='search-box' />
+                    <input type="text" placeholder='Search items'  className='search-box' />
 
                     <img src={searchicon} alt="" className='srchiconimg' />
 
