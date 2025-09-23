@@ -16,7 +16,6 @@ const Premiumsec = () => {
 
             <div className="products">
                 {topselling.map((item) => {
-                    // ✅ Find if this item exists in the cart
                     const cartItem = cartItems.find((cart) => cart.id === item.id);
 
                     return (
