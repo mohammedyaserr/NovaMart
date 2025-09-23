@@ -1,38 +1,36 @@
 import React from 'react'
-import Login from './Components/login-signup/Login'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Signup from './Components/login-signup/Signup'
-import Dashbord from './Components/Dashbord/Navbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-import Profile from './Components/Dashbord/Profile'
-import Cart from './Components/Dashbord/Cart'
+
+import Login from './Components/login-signup/Login'
+import Signup from './Components/login-signup/Signup'
 import Home from './Components/Dashbord/Home'
-import { StoreProvider } from './Components/Context'
+import Profile from './Components/Dashbord/Profile'
+import Navbar from './Components/Dashbord/Navbar'
+import { StoreProvider } from './Components/StoreContext'
+
 
 const App = () => {
   return (
-    <>
+    <StoreProvider>
       <ToastContainer
         position='top-center'
-        autoClose='1500'
+        autoClose={1500}
         closeButton={false}
         hideProgressBar={true}
         pauseOnHover={false}
         draggable={true}
       />
 
-      <StoreProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/cart' element={<Cart />} />
-          </Routes>
-        </BrowserRouter>
-      </StoreProvider>
-    </>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/profile' element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
+    </StoreProvider>
   )
 }
 

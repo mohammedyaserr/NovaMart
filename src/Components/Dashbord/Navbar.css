@@ -16,7 +16,9 @@
     align-items: center;
     justify-content: space-evenly;
     background: #202A38;
-
+    position: fixed;
+    z-index: 9;
+    /* display: none; */
 }
 
 .nav-bar-search-box {
@@ -74,7 +76,7 @@
 }
 
 .profile {
-    /* background: #000; */
+    /* background: yellow; */
     height: 100%;
     width: 33%;
     display: flex;
@@ -82,7 +84,7 @@
     justify-content: center;
 }
 
-.inner-itesm {
+.inner-items {
     width: 40%;
     height: 50px;
     display: flex;
@@ -111,7 +113,7 @@
 }
 
 
-.under-nav-optins {
+.under-nav-options {
     width: 100%;
     height: 55px;
     /* gap: 20%; */
@@ -123,6 +125,9 @@
     justify-content: space-around;
     background: rgb(0, 0, 0);
     border-top: solid 1px #ffffff;
+    margin-top: 65px;
+    z-index: 1;
+    position: absolute;
 }
 
 

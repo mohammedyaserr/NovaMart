@@ -73,3 +73,7 @@
     text-align: center;
     /* background: rebeccapurple; */
 }
+
+.qty-controls {
+    width: 10%;
+}
