@@ -19,6 +19,7 @@ const Login = () => {
 
     const handlelogin = () => {
       let Userlist = JSON.parse(localStorage.getItem("Userslist")) || [];
+      
       const Usermatch = Userlist.find (
         (user) => user.email === email && user.password === password
       );
@@ -57,7 +58,7 @@ const Login = () => {
                 </div>
               </div>
               <p className='afterlogotxt'>or use your email account</p>
-              <input type="text" onChange={(e) =>setEmail(e.target.value)} placeholder='Username or email' className="login-inputbox" />
+              <input type="email" onChange={(e) =>setEmail(e.target.value.toLocaleLowerCase())} placeholder='email' className="login-inputbox" />
               <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" className='login-inputbox' />
               <div className="login-card-left-rememberme">
                 <div className="remembermewrap">

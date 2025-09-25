@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import mainlogotans from "../../assets/M&co-logo-transparent.png"
 import user from "../../assets/user (1).png"
@@ -14,7 +14,9 @@ import { useStore } from '../StoreContext'
 
 
 const Navbar = () => {
-  const { toggleCart } = useStore()  // access context
+  const { toggleCart } = useStore() 
+
+  const nav = useNavigate ()
 
   return (
     <>
@@ -22,7 +24,7 @@ const Navbar = () => {
 
       <div className="navbar-container">
         <div className="nav-branding">
-          <img src={mainlogotans} alt="logo" />
+          <img src={mainlogotans} alt="logo" onClick={() => nav("/home")}/>
         </div>
 
         <div className="nav-bar-search-box">
@@ -39,6 +41,7 @@ const Navbar = () => {
             </Link>
 
             <div className="img-div" onClick={toggleCart}>
+              <p>{}</p>
               <img src={cartIcon} alt="cart" className='userprofileicon' />
             </div>
 

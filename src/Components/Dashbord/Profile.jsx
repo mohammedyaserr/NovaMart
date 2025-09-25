@@ -21,6 +21,7 @@ const Profile = () => {
         password: ""
     });
 
+
     const [editdata, seteditdata] = useState(false);
 
 
@@ -31,18 +32,42 @@ const Profile = () => {
     };
 
     const updatedusr = () => {
-        let users = JSON.parse(localStorage.getItem("Userslist")) || [];
+    let users = JSON.parse(localStorage.getItem("Userslist")) || [];
 
-        users = users.map(user =>
-            user.email === currentUser.email ? data : user
-        );
+    const emailExists = users.some(
+        (user) => user.email.toLowerCase() === data.email.toLowerCase() &&
+                  user.email.toLowerCase() !== currentUser.email.toLowerCase()
+    );
 
-        localStorage.setItem("Userslist", JSON.stringify(users));
-        localStorage.setItem("currentUser", JSON.stringify(data));
+    const nuberExists = users.some(
+        (user) => user.number === data.number &&
+                  user.number !== currentUser.number
+    );
 
-        seteditdata(false);
-        toast.success("Profile updated successfully ");
-    };
+    if (emailExists , nuberExists) {
+        toast.warning("Email or Number already exists!");
+        return; 
+    }
+
+    // if (numberExists) {
+    //     toast.warning("Phone number already exists!");
+    //     return; 
+    // }
+
+    users = users.map(user =>
+        user.email === currentUser.email ? data : user
+    );
+
+    localStorage.setItem("Userslist", JSON.stringify(users));
+    localStorage.setItem("currentUser", JSON.stringify(data));
+
+    seteditdata(false);
+    toast.success("Profile updated successfully");
+
+    console.log("clicked");
+    
+};
+
 
     const delact = () => {
         const users = JSON.parse(localStorage.getItem("Userslist")) || [];
@@ -85,24 +110,24 @@ const Profile = () => {
                         {editdata ? (
                             <>
                                 <div className="parent">
-    <label htmlFor="name">Name :</label>
-    <input type="text" id="name" className="editbox" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} />
-</div>
+                                    <label htmlFor="name">Name :</label>
+                                    <input type="text" id="name" className="editbox" value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })} />
+                                </div>
 
-<div className="parent">
-    <label htmlFor="email">Email :</label>
-    <input type="email" id="email" className="editbox" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} />
-</div>
+                                <div className="parent">
+                                    <label htmlFor="email">Email :</label>
+                                    <input type="email" id="email" className="editbox" value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })} />
+                                </div>
 
-<div className="parent">
-    <label htmlFor="number">Number :</label>
-    <input type="text" id="number" className="editbox" value={data.number} onChange={(e) => setData({ ...data, number: e.target.value })} />
-</div>
+                                <div className="parent">
+                                    <label htmlFor="number">Number :</label>
+                                    <input type="text" id="number" className="editbox" value={data.number} onChange={(e) => setData({ ...data, number: e.target.value })} />
+                                </div>
 
-<div className="parent">
-    <label htmlFor="password">Password :</label>
-    <input type="text" id="password" className="editbox" value={data.password} onChange={(e) => setData({ ...data, password: e.target.value })} />
-</div>
+                                <div className="parent">
+                                    <label htmlFor="password">Password :</label>
+                                    <input type="text" id="password" className="editbox" value={data.password} onChange={(e) => setData({ ...data, password: e.target.value })} />
+                                </div>
 
 
 

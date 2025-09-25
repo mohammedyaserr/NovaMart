@@ -12,6 +12,7 @@ const Signup = () => {
 
   const navigate = useNavigate();
 
+
   const handleSignup = () => {
   if (!name || !email || !number || !password || !confirmPassword) {
     toast.error("Please fill all fields!");
@@ -25,9 +26,16 @@ const Signup = () => {
 
   let Userslist = JSON.parse(localStorage.getItem("Userslist")) || [];
 
-  const existingUser = Userslist.find((user) => user.email === email);
+  const existingUser = Userslist.find((user) => user.email === email)
+
   if (existingUser) {
     toast.error("Email already registered!");
+    return; 
+  }
+  const exisitingnumber =Userslist.find((User)=> User.number === number)
+
+  if (exisitingnumber)  {
+    toast.error("number is already registered!");
     return;
   }
 
@@ -79,7 +87,7 @@ const Signup = () => {
               placeholder="Email"
               className="login-inputbox"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value.toLocaleLowerCase())}
             />
             <input
               type="text"

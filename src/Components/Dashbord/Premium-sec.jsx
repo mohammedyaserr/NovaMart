@@ -26,7 +26,8 @@ const Premiumsec = () => {
                             <div className="pdt-details-area">
                                 <h4>{item.name}</h4>
                                 <p>Mrp</p>
-                                <h5>₹12,999 (incl. of all taxes)</h5>
+                                <h5>₹{item.price}</h5>
+                                <p>(incl. of all taxes)</p>
 
                                 {cartItem ? (
                                     <div className="qty-controls">
